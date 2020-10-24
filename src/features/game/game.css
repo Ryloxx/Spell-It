@@ -1,0 +1,42 @@
+.game_box {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 5px 5px rgba (0, 0, 0, 0.5);
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 20px;
+  height: max(300px, 100%);
+}
+.game_box * {
+  color: #fff;
+}
+.game_start {
+  height: 100%;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  padding: 1rem;
+}
+.game_running > * {
+  margin: 0.8rem 0;
+}
+
+.game-enter {
+  opacity: 0;
+}
+.game-enter-active {
+  opacity: 0.5;
+  transition: opacity 300ms;
+}
+.game-enter-done {
+  opacity: 1;
+}
+.game-exit {
+  opacity: 1;
+}
+.game-exit-active {
+  opacity: 0.5;
+  transition: opacity 300ms;
+}
+.game-exit-done {
+  opacity: 0;
+}

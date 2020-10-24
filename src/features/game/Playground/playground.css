@@ -1,0 +1,14 @@
+.playground_box {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.playground_box > * {
+  margin: 0.8rem 0;
+}
+.playground_input {
+  margin: 1rem 0;
+}
+.playground_box button {
+  font-size: larger;
+}

@@ -1,68 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Spell-It
 
-## Available Scripts
+**Tier:** 3-Advanced
 
-In the project directory, you can run:
+Knowing how to spell is a fundamental part of being fluent in any language.
+Whether you are a youngster learning how to spell or an individual learning a
+new language being able to practice helps to solidify your language skills.
 
-### `yarn start`
+The Spell-It app helps users practice their spelling by playing the audio
+recording of a word the user must then spell using the computer keyboard.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## User Stories
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+-   [ ] User can click the 'Play' button to hear the word that's to be entered
+-   [ ] User can see letters displayed in the word input text box as they are
+        entered on the keyboard
+-   [ ] User can click the 'Enter' button to submit the word that has been
+        typed in the word input text box
+-   [ ] User can see a confirmation message when the correct word is typed
+-   [ ] User can see a message requesting the word be typed again when it is
+        spelled incorrectly
+-   [ ] User can see a tally of the number of correct spellings, total number
+        of words attempted, and a percentage of successful entries.
 
-### `yarn test`
+## Bonus features
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   [ ] User can hear an confirmation sound when the word is correctly spelled
+-   [ ] User can hear a warning sound when the word is incorrectly spelled
+-   [ ] User can click the 'Hint' button to highlight the incorrect letters
+        in the word input text box
+-   [ ] User can press the 'Enter' key on the keyboard to submit a typed word
+        or click the 'Enter' button in the app window
 
-### `yarn build`
+## Useful links and resources
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   [Texas Instruments Speak and Spell](<https://en.wikipedia.org/wiki/Speak_%26_Spell_(toy)>)
+-   [Web Audio API](https://codepen.io/2kool2/pen/RgKeyp)
+-   [Click and Speak](https://codepen.io/shangle/pen/Wvqqzq)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Example projects
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-   [Speak N Spell on Google Play](https://play.google.com/store/apps/details?id=au.id.weston.scott.SpeakAndSpell&hl=en_US)
+-   [Word Wizard for iOS](https://itunes.apple.com/app/id447312716)
