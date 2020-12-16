@@ -1,5 +1,5 @@
-import { easy, hard } from './wordlist';
-const { createSlice } = require('@reduxjs/toolkit');
+import { easy, hard } from "./wordlist";
+const { createSlice } = require("@reduxjs/toolkit");
 function getRandomIndex(max) {
   return Math.round(Math.random() * max);
 }
@@ -10,9 +10,9 @@ const gameInitialState = (gameMode) => {
     gameModes: Object.keys(difficulty),
     dictionnary: difficulty[gameMode],
     maxWord: 10,
-    currentWord: '',
+    currentWord: "",
     wordCount: -1,
-    status: 'idle',
+    status: "idle",
     error: false,
     errorCount: 0,
     correct: false,
@@ -21,43 +21,40 @@ const gameInitialState = (gameMode) => {
   };
 };
 const gameSlice = createSlice({
-  name: 'game',
+  name: "game",
   initialState: {
-    game: gameInitialState('easy'),
+    game: gameInitialState("easy"),
   },
   reducers: {
     nextWord: (state, action) => {
-      if (state.game.wordCount < state.game.maxWord) {
-        const dictionnary = state.game.dictionnary;
-        const index = getRandomIndex(
-          dictionnary.length - state.game.wordCount - 2,
-        );
-        if (!state.game.correct && state.game.wordCount > 0) {
-          state.game.wrongWords.push(state.game.currentWord);
-        }
+      const dictionnary = state.game.dictionnary;
+      const index = getRandomIndex(
+        dictionnary.length - state.game.wordCount - 2
+      );
+      if (!state.game.correct && state.game.wordCount > 0) {
+        state.game.wrongWords.push(state.game.currentWord);
+      }
+      state.game.goodWord += state.game.correct;
+      state.game.errorCount += !state.game.correct;
+      state.game.wordCount += 1;
+      state.game.correct = false;
+      state.game.error = false;
+      if (state.game.wordCount >= state.game.maxWord) {
+        state.game.status = "done";
+      } else {
         state.game.currentWord = dictionnary[index];
         const temp = dictionnary[index];
         dictionnary[index] =
           dictionnary[dictionnary.length - state.game.wordCount - 2];
         dictionnary[dictionnary.length - state.game.wordCount - 2] = temp;
-        state.game.goodWord += state.game.correct;
-        state.game.errorCount += !state.game.correct;
-        state.game.wordCount += 1;
-        state.game.correct = false;
-        state.game.error = false;
-      } else {
-        if (!state.game.correct && state.game.wordCount > 0) {
-          state.game.wrongWords.push(state.game.currentWord);
-        }
-        state.game.status = 'done';
       }
     },
     stopGame: (state, action) => {
-      state.game.status = 'idle';
+      state.game.status = "idle";
     },
     startNewGame: (state, action) => {
       state.game = { ...state.game, ...gameInitialState(action.payload) };
-      state.game.status = 'running';
+      state.game.status = "running";
     },
     tryWord: (state, action) => {
       state.game.error = action.payload !== state.game.currentWord;

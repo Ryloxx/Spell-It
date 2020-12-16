@@ -1,8 +1,5 @@
 .game_box {
-  padding: 2rem;
-  margin: 1rem 0;
-  border-radius: 20px;
-  height: max(300px, 100%);
+  padding: 1rem;
 }
 .game_box * {
   color: #fff;
@@ -13,7 +10,6 @@
   display: flex;
   place-items: center;
   place-content: center;
-  padding: 1rem;
 }
 .game_running > * {
   margin: 0.8rem 0;
