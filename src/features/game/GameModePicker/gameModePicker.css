@@ -1,3 +1,80 @@
+.gameModePicker_box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  min-height: 150px;
+}
 .gameModePicker_box button {
   font-size: x-large;
+  flex: 1;
+  position: relative;
+}
+.gameModePicker_box button::after {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+  pointer-events: none;
+}
+.gameModePicker_box button::after {
+  clip-path: polygon(
+    0% 0%,
+    0% 0%,
+    0% 100%,
+    100% 100%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+}
+/* .gameModePicker_box button:first-child::after {
+  clip-path: polygon(
+    0% 0%,
+    0% 0%,
+    0% 100%,
+    50% 100%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+}
+.gameModePicker_box button:last-child::after {
+  clip-path: polygon(
+    0% 0%,
+    50% 0%,
+    0% 100%,
+    100% 100%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+} */
+
+.gameModePicker_box button:hover::after {
+  transition: clip-path 200ms ease-out, box-shadow 400ms ease-out,
+    border 100ms ease-out;
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 5px black inset;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    0% 100%,
+    0% 100%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+}
+.gameModePicker_box button {
+}
+.gameModePicker_box button:first-child ~ button {
+  margin-left: 0.5vmax;
+}
+.gameModePicker_box button:hover {
+  transition: transform 200ms ease-out;
+  transform: scale(1.1);
+  z-index: 1;
 }

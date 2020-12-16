@@ -1,6 +1,6 @@
 .score_box {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 1rem;
+  text-shadow: 1px 1px 1px black;
 }
